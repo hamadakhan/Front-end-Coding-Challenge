@@ -1,0 +1,13 @@
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item ">
+        <a class="page-link" (click)="getPreviousPage()" >Previous</a>
+      </li>
+      <li class="page-item"  [ngClass]="{'active' : currentPage-1 == page}" *ngFor="let page of total_count | paginator :  currentPage" >
+          <a class="page-link"  (click)="getPage(page)">{{page+1}}</a></li>
+  
+      <li class="page-item">
+        <a class="page-link" (click)="getNextPage()">Next</a>
+      </li>
+    </ul>
+  </nav>

@@ -1,0 +1,16 @@
+<div class="card" >
+      
+    <div class="card-body">
+        <div class="row">
+            <div class="col-2"><img [src]="repo.owner.avatar_url" class="img-thumbnail" alt="..."></div>
+            <div class="col">      <h5 class="card-title">{{repo.name}}</h5>
+                <p class="card-text">{{repo.description}}</p>
+                <a href="#" class="btn btn-outline-dark m-1">Stars :{{repo.stargazers_count}}</a>
+          
+                <a href="#" class="btn btn-outline-dark m-1">Issues : {{repo.open_issues}}</a>
+                <a href="#" class="btn btn-light m-1">Submitted {{repo.updated_at | amTimeAgo}} by {{repo.owner.login}}</a></div>
+
+        </div>
+
+    </div>
+  </div>
